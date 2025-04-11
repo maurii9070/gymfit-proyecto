@@ -366,6 +366,31 @@ header {
     }
 }
 
+.hero-content h1 {
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+
+.hero-content p {
+    animation: fadeInUp 1s ease forwards 0.5s;
+    opacity: 0;
+}
+
+.hero-content .btn {
+    animation: fadeInUp 1s ease forwards 1s;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /* Estilos para el submenú */
 .menu-item {
