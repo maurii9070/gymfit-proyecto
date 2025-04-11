@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrenadores - Gimnasio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/entrenadores.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div>
+                <a href="../index.html" class="logo">Gym<span>Fit</span></a>
+            </div>
+
+            <nav class="navbar">
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">
+                    <span class="hamburger"></span>
+                </label>
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="./clases.html">Clases</a>
+                        <ul class="submenu">
+                            <li><a href="#">Musculación</a></li>
+                            <li><a href="#">CrossFit</a></li>
+                            <li><a href="#">Yoga</a></li>
+                            <li><a href="#">Spinning</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./entrenadores.html">Entrenadores</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                    <li><a href="./precio.html">Precios</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+
+                </ul>
+                <button id="theme-toggle" class="theme-switcher" aria-label="Cambiar tema">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="trainers-container">
+        <h1>Nuestros Entrenadores</h1>
+
+        <div class="trainers-grid">
+            <!-- Trainer Card 1 -->
+            <div class="trainer-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../img/carlos-profile.webp" alt="Entrenador 1">
+                        <h2>Carlos Martínez</h2>
+                        <p>Especialista en Fuerza</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Carlos Martínez</h3>
+                        <div class="skills">
+                            <div class="skill">
+                                <span>Fuerza</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <span>Flexibilidad</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <div class="stars" data-rating="4">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <p class="bio">15 años de experiencia en entrenamiento de fuerza y acondicionamiento físico.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trainer Card 2 - Ana -->
+            <div class="trainer-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../img/ana-profile.jpg" alt="Entrenadora Ana">
+                        <h2>Ana Rodríguez</h2>
+                        <p>Especialista en Yoga</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Ana Rodríguez</h3>
+                        <div class="skills">
+                            <div class="skill">
+                                <span>Flexibilidad</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <span>Meditación</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <div class="stars" data-rating="5">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <p class="bio">Instructora de yoga certificada con 10 años de experiencia en Vinyasa y Hatha Yoga.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trainer Card 3 - Juan -->
+            <div class="trainer-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../img/juan-profile.webp" alt="Entrenador Juan">
+                        <h2>Juan Pérez</h2>
+                        <p>Entrenador Funcional</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Juan Pérez</h3>
+                        <div class="skills">
+                            <div class="skill">
+                                <span>Resistencia</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <span>Coordinación</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <div class="stars" data-rating="4">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <p class="bio">Especializado en entrenamiento funcional y preparación física para deportes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trainer Card 4 - Lucía -->
+            <div class="trainer-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../img/lucia-profile.jpg" alt="Entrenadora Lucía">
+                        <h2>Lucía González</h2>
+                        <p>Especialista en Pilates</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Lucía González</h3>
+                        <div class="skills">
+                            <div class="skill">
+                                <span>Control corporal</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 92%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <span>Postura</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 88%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <div class="stars" data-rating="4">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <p class="bio">Instructora de Pilates con certificación internacional y 8 años de experiencia.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trainer Card 5 - Pedro -->
+            <div class="trainer-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../img/pedro-profile.jpg" alt="Entrenador Pedro">
+                        <h2>Pedro Sánchez</h2>
+                        <p>Especialista en CrossFit</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Pedro Sánchez</h3>
+                        <div class="skills">
+                            <div class="skill">
+                                <span>Potencia</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 93%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <span>Velocidad</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 87%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <div class="stars" data-rating="5">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <p class="bio">Entrenador de CrossFit Nivel 2 con experiencia en competiciones nacionales.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trainer Card 6 - Laura -->
+            <div class="trainer-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../img/laura-profile.jpg" alt="Entrenadora Laura">
+                        <h2>Laura Fernández</h2>
+                        <p>Nutricionista Deportiva</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Laura Fernández</h3>
+                        <div class="skills">
+                            <div class="skill">
+                                <span>Nutrición</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 98%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <span>Planificación</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <div class="stars" data-rating="5">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <p class="bio">Licenciada en nutrición con especialización en deportes y alto rendimiento.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trainer Card 7 - Roberto -->
+            <div class="trainer-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../img/roberto-profile.webp" alt="Entrenador Roberto">
+                        <h2>Roberto Díaz</h2>
+                        <p>Especialista en Rehabilitación</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Roberto Díaz</h3>
+                        <div class="skills">
+                            <div class="skill">
+                                <span>Recuperación</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 96%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <span>Movilidad</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <div class="stars" data-rating="4">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <p class="bio">Fisioterapeuta y entrenador especializado en recuperación de lesiones.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more trainer cards following the same pattern -->
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Suscríbete a nuestro newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit" class="btn btn-primary">Suscribirse</button>
+                    <p class="form-note">Recibe promociones y novedades exclusivas</p>
+                </form>
+            </div>
+
+            <div class="footer-column">
+                <h3>Redes Sociales</h3>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Siempreviva 742, Springfield</p>
+                    <p><i class="fas fa-phone"></i> +54 11 1234-5678</p>
+                    <p><i class="fas fa-envelope"></i> info@gymfit.com</p>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Ubicación</h3>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4535.155933476929!2d-65.2959316246504!3d-24.189325978373464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f5bca584281%3A0xb1d519d50cac526d!2sFacultad%20de%20Ingenier%C3%ADa%20-%20UNJu!5e1!3m2!1ses-419!2sar!4v1743739895185!5m2!1ses-419!2sar"
+                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 GymFit. Todos los derechos reservados.</p>
+        </div>
+        </div>
+
+    </footer>
+
+    <script src="../js/theme.js"></script>
+</body>
+
+</html>

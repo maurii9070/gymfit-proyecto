@@ -1,0 +1,168 @@
+
+.trainers-container {
+    padding: 6rem 0 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.trainers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.trainer-card {
+    perspective: 1000px;
+    height: 400px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.trainer-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+.card-front {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-front img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.card-back {
+    background: #f8f9fa;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+}
+
+.skills {
+    margin: 1rem 0;
+}
+
+.skill {
+    margin-bottom: 0.8rem;
+}
+
+.skill-bar {
+    height: 10px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    margin-top: 0.3rem;
+}
+
+.skill-level {
+    height: 100%;
+    border-radius: 5px;
+    background: #4CAF50;
+    transition: width 1s ease-in-out;
+}
+
+.rating {
+    margin: 1rem 0;
+}
+
+.stars {
+    display: inline-block;
+    font-size: 0;
+}
+
+.stars span {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23ddd" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>');
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.stars[data-rating="1"] span:nth-child(-n+1),
+.stars[data-rating="2"] span:nth-child(-n+2),
+.stars[data-rating="3"] span:nth-child(-n+3),
+.stars[data-rating="4"] span:nth-child(-n+4),
+.stars[data-rating="5"] span:nth-child(-n+5) {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23FFD700" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>');
+    transform: scale(1.1);
+}
+
+body.dark .trainer-card {
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .card-front,
+body.dark .card-back {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+body.dark .trainer-card h2,
+body.dark .trainer-card h3,
+body.dark .trainer-card p {
+    color: var(--text-color);
+}
+
+body.dark .skill-bar {
+    background-color: #444;
+}
+
+body.dark .skill-level {
+    background-color: var(--primary-color);
+}
+
+body.dark .stars span {
+    color: var(--primary-color);
+}
+
+body.dark .trainers-container {
+    background-color: var(--section-bg);
+}
+
+body.dark .trainers-container h1 {
+    color: var(--text-color);
+}
+body.dark .trainer-card h3,
+body.dark .trainer-card p,
+body.dark .trainer-card .trainer-specialty {
+    color: var(--text-color);
+}
+
+body.dark .trainer-social a {
+    color: var(--text-color);
+}
+
+body.dark .trainer-social a:hover {
+    color: var(--primary-color);
+}
+
+body.dark .trainers-section {
+    background-color: var(--section-bg);
+}

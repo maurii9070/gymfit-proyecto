@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Gimnasio</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+
+            <div>
+                <a href="#" class="logo">Gym<span>Fit</span></a>
+            </div>
+
+            <nav class="navbar">
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">
+                    <span class="hamburger"></span>
+                </label>
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="./pages/clases.html">Clases</a>
+                        <ul class="submenu">
+                            <li><a href="#">Musculación</a></li>
+                            <li><a href="#">CrossFit</a></li>
+                            <li><a href="#">Yoga</a></li>
+                            <li><a href="#">Spinning</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./pages/entrenadores.html">Entrenadores</a></li>
+                    <li><a href="./pages/contacto.html">Contacto</a></li>
+                    <li><a href="./pages/precio.html">Precios</a></li>
+                    <li><a href="./pages/blog.html">Blog</a></li>
+
+                </ul>
+                <button id="theme-toggle" class="theme-switcher" aria-label="Cambiar tema" title="Cambiar tema">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="video-background">
+            <iframe
+                src="https://www.youtube.com/embed/uNN62f55EV0?autoplay=1&mute=1&loop=1&controls=0&playlist=uNN62f55EV0&rel=0&showinfo=0&cc_load_policy=0&iv_load_policy=3&modestbranding=1"
+                frameborder="0" allowfullscreen allow="autoplay">
+            </iframe>
+        </div>
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1 class="hero-title animate">Transforma tu cuerpo</h1>
+                <p class="hero-subtitle animate">Comienza tu viaje fitness hoy mismo</p>
+                <a href="#" class="btn btn-primary animate">Únete ahora</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="featured-classes">
+        <div class="container-clases">
+            <h2 class="section-title">Clases Destacadas</h2>
+            <div class="classes-grid">
+                <div class="class-card">
+                    <div class="card-image">
+                        <img src="img/clase-crossfit.webp" alt="Clase de CrossFit">
+                    </div>
+                    <div class="card-content">
+                        <h3>CrossFit</h3>
+                        <p>Entrenamiento funcional de alta intensidad</p>
+                        <a href="#" class="btn btn-secondary">Más info</a>
+                    </div>
+                </div>
+
+                <div class="class-card">
+                    <div class="card-image">
+                        <img src="img/clase-yoga.webp" alt="Clase de Yoga">
+                    </div>
+                    <div class="card-content">
+                        <h3>Yoga</h3>
+                        <p>Mejora tu flexibilidad y reduce el estrés</p>
+                        <a href="#" class="btn btn-secondary">Más info</a>
+                    </div>
+                </div>
+
+                <div class="class-card">
+                    <div class="card-image">
+                        <img src="img/clase-spinning.webp" alt="Clase de Spinning">
+                    </div>
+                    <div class="card-content">
+                        <h3>Spinning</h3>
+                        <p>Entrenamiento cardiovascular intenso</p>
+                        <a href="#" class="btn btn-secondary">Más info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-counter">
+        <div class="container-stats">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="counter" data-target="500">0</div>
+                    <span>+ Socios satisfechos</span>
+                </div>
+                <div class="stat-item">
+                    <div class="counter" data-target="20">0</div>
+                    <span>+ Entrenadores certificados</span>
+                </div>
+                <div class="stat-item">
+                    <div class="counter" data-target="10">0</div>
+                    <span>+ Años de experiencia</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="testimonials-container">
+            <h2 class="section-title">Testimonios</h2>
+
+            <div class="testimonial-carousel">
+                <input type="radio" name="testimonial-slide" id="slide-1" checked>
+                <input type="radio" name="testimonial-slide" id="slide-2">
+                <input type="radio" name="testimonial-slide" id="slide-3">
+
+                <div class="testimonial-slides">
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"El mejor gimnasio al que he ido. Los entrenadores son muy profesionales."</p>
+                                <div class="testimonial-author">
+                                    <img src="img/juan-profile.webp" alt="Cliente satisfecho">
+                                    <h4>Juan Pérez</h4>
+                                    <span>Miembro desde 2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"He logrado resultados increíbles en solo 3 meses. ¡Totalmente recomendado!"</p>
+                                <div class="testimonial-author">
+                                    <img src="img/maria-profile.webp" alt="Cliente satisfecho">
+                                    <h4>María Gómez</h4>
+                                    <span>Miembro desde 2021</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"Ambiente increíble y equipos de última generación. No cambiaría por nada."</p>
+                                <div class="testimonial-author">
+                                    <img src="img/carlos-profile.webp" alt="Cliente satisfecho">
+                                    <h4>Carlos Rodríguez</h4>
+                                    <span>Miembro desde 2019</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-controls">
+                    <label for="slide-1"></label>
+                    <label for="slide-2"></label>
+                    <label for="slide-3"></label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/counter.js"></script>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Suscríbete a nuestro newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit" class="btn btn-primary">Suscribirse</button>
+                    <p class="form-note">Recibe promociones y novedades exclusivas</p>
+                </form>
+            </div>
+
+            <div class="footer-column">
+                <h3>Redes Sociales</h3>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Siempreviva 742, Springfield</p>
+                    <p><i class="fas fa-phone"></i> +54 11 1234-5678</p>
+                    <p><i class="fas fa-envelope"></i> info@gymfit.com</p>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Ubicación</h3>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4535.155933476929!2d-65.2959316246504!3d-24.189325978373464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f5bca584281%3A0xb1d519d50cac526d!2sFacultad%20de%20Ingenier%C3%ADa%20-%20UNJu!5e1!3m2!1ses-419!2sar!4v1743739895185!5m2!1ses-419!2sar"
+                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 GymFit. Todos los derechos reservados.</p>
+        </div>
+        </div>
+
+    </footer>
+
+    <script src="./js/theme.js"></script>
+</body>
+
+</html>

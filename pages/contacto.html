@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Gimnasio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/contacto.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div>
+                <a href="/index.html" class="logo">Gym<span>Fit</span></a>
+            </div>
+
+            <nav class="navbar">
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">
+                    <span class="hamburger"></span>
+                </label>
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="./clases.html">Clases</a>
+                        <ul class="submenu">
+                            <li><a href="#">Musculación</a></li>
+                            <li><a href="#">CrossFit</a></li>
+                            <li><a href="#">Yoga</a></li>
+                            <li><a href="#">Spinning</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./entrenadores.html">Entrenadores</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                    <li><a href="./precio.html">Precios</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                </ul>
+                <button id="theme-toggle" class="theme-switcher" aria-label="Cambiar tema">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="contact-main">
+        <section class="contact-section">
+            <div class="contact-header">
+                <h1>Contáctanos</h1>
+                <p>Complete el formulario y nos pondremos en contacto con usted</p>
+            </div>
+
+            <form class="contact-form" action="#contact-confirmation" method="get" target="_self">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Nombre completo</label>
+                        <input type="text" id="name" name="name" required pattern="[A-Za-záéíóúÁÉÍÓÚñÑ ]{3,}"
+                            placeholder="Ej: Juan Pérez">
+                        <span class="form-error">Mínimo 3 caracteres, solo letras</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="form-error">Ingrese un email válido</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Asunto</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Seleccione un asunto</option>
+                        <option value="membership">Membresías</option>
+                        <option value="classes">Clases</option>
+                        <option value="trainers">Entrenadores</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" required minlength="10"></textarea>
+                    <span class="form-error">El mensaje debe tener al menos 10 caracteres</span>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Enviar mensaje
+                </button>
+            </form>
+
+            <!-- Modal de confirmación -->
+            <div id="contact-confirmation" class="confirmation-modal">
+                <div class="modal-content">
+                    <h2>¡Mensaje Enviado!</h2>
+                    <p>Gracias por contactarnos. Nos pondremos en contacto contigo pronto.</p>
+                    <a href="#" class="modal-close-btn">Aceptar</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Suscríbete a nuestro newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit" class="btn btn-primary">Suscribirse</button>
+                    <p class="form-note">Recibe promociones y novedades exclusivas</p>
+                </form>
+            </div>
+
+            <div class="footer-column">
+                <h3>Redes Sociales</h3>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Siempreviva 742, Springfield</p>
+                    <p><i class="fas fa-phone"></i> +54 11 1234-5678</p>
+                    <p><i class="fas fa-envelope"></i> info@gymfit.com</p>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Ubicación</h3>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4535.155933476929!2d-65.2959316246504!3d-24.189325978373464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f5bca584281%3A0xb1d519d50cac526d!2sFacultad%20de%20Ingenier%C3%ADa%20-%20UNJu!5e1!3m2!1ses-419!2sar!4v1743739895185!5m2!1ses-419!2sar"
+                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 GymFit. Todos los derechos reservados.</p>
+        </div>
+        </div>
+
+    </footer>
+
+    <script src="../js/theme.js"></script>
+</body>
+</html>

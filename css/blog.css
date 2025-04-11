@@ -1,0 +1,494 @@
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-card.featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.blog-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover .blog-image img {
+    transform: scale(1.05);
+}
+
+.blog-content {
+    padding: 1.5rem;
+}
+
+.blog-tag {
+    display: inline-block;
+    background: #f0f0f0;
+    color: #333;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.blog-header {
+    text-align: center;
+    padding-top: 8rem;
+    background: linear-gradient(to right, #0066cc, #00cc99);
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.tag-filter {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.tag-btn {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tag-btn.active, .tag-btn:hover {
+    background: white;
+    color: #333;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #0066cc;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.blog-card {
+    display: none;
+}
+
+#all:checked ~ main .blog-card,
+#nutricion:checked ~ main [data-tags~="nutricion"],
+#ejercicios:checked ~ main [data-tags~="ejercicios"], 
+#consejos:checked ~ main [data-tags~="consejos"],
+#eventos:checked ~ main [data-tags~="eventos"] {
+    display: block;
+}
+
+.tag-btn.active {
+    background: white;
+    color: #333;
+}
+
+/* Animaciones con CSS */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.blog-card {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.blog-card:nth-child(1) { animation-delay: 0.1s; }
+.blog-card:nth-child(2) { animation-delay: 0.2s; }
+.blog-card:nth-child(3) { animation-delay: 0.3s; }
+.blog-card:nth-child(4) { animation-delay: 0.4s; }
+.blog-card:nth-child(5) { animation-delay: 0.5s; }
+
+/* Dropdown de comentarios con CSS */
+.comment-replies {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.comment-reply-btn:checked + .comment-replies {
+    max-height: 1000px;
+}
+
+.comment-reply-btn::after {
+    content: ' ▼';
+}
+
+.comment-reply-btn:checked::after {
+    content: ' ▲';
+}
+
+
+.comments-section {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.comments-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.comments-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(to right, #0066cc, #00cc99);
+}
+
+.comment {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+    margin-top: 1rem;
+}
+
+.comment:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.comment-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0066cc, #00cc99);
+    position: relative;
+    flex-shrink: 0;
+}
+
+.comment-avatar::before {
+    content: attr(data-initial);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.comment-content {
+    flex-grow: 1;
+}
+
+.comment-author {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.comment-date {
+    font-size: 0.8rem;
+    color: #777;
+    margin-left: 0.5rem;
+}
+
+.comment-text {
+    color: #555;
+    line-height: 1.5;
+}
+
+.comment-reply {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.comment-reply a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.comment-form {
+    margin-top: 2rem;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+    min-height: 100px;
+    margin-bottom: 1rem;
+}
+
+.comment-form button {
+    background: linear-gradient(to right, #0066cc, #00cc99);
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+.comment-form button:hover {
+    opacity: 0.9;
+}
+
+
+.comment-replies {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    margin-left: 60px; 
+}
+
+.comment-replies.expanded {
+    max-height: 1000px; 
+}
+
+.comment-reply-btn {
+    background: none;
+    border: none;
+    color: #0066cc;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0;
+    font-size: 0.9rem;
+}
+
+.comment-reply-btn::after {
+    content: ' ▼';
+    font-size: 0.7rem;
+}
+
+.comment-reply-btn.expanded::after {
+    content: ' ▲';
+}
+
+
+.blog-card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Animaciones con delays escalonados */
+.blog-card:nth-child(1) {
+    animation: fadeInUp 0.8s ease 0.1s forwards;
+}
+.blog-card:nth-child(2) {
+    animation: fadeInUp 0.8s ease 0.3s forwards;
+}
+.blog-card:nth-child(3) {
+    animation: fadeInUp 0.8s ease 0.5s forwards;
+}
+.blog-card:nth-child(4) {
+    animation: fadeInUp 0.8s ease 0.7s forwards;
+}
+.blog-card:nth-child(5) {
+    animation: fadeInUp 0.8s ease 0.9s forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.blog-grid {
+    view-timeline-name: --blogTimeline;
+    view-timeline-axis: block;
+}
+
+.blog-card {
+    animation: linear scroll-reveal both;
+    animation-timeline: --blogTimeline;
+    animation-range: entry 10% cover 30%;
+}
+
+/* Efecto escalonado para cada tarjeta */
+.blog-card:nth-child(1) { animation-delay: 0.1s; }
+.blog-card:nth-child(2) { animation-delay: 0.2s; }
+.blog-card:nth-child(3) { animation-delay: 0.3s; }
+.blog-card:nth-child(4) { animation-delay: 0.4s; }
+.blog-card:nth-child(5) { animation-delay: 0.5s; }
+
+/* Filtrado con radio buttons */
+.filter-radio {
+    position: absolute;
+    opacity: 0;
+}
+
+/* Mostrar todos los artículos por defecto */
+.blog-card {
+    display: block;
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Ocultar todos los artículos cuando no es "Todos" */
+#filter-nutricion:checked ~ main .blog-card,
+#filter-ejercicios:checked ~ main .blog-card,
+#filter-consejos:checked ~ main .blog-card,
+#filter-eventos:checked ~ main .blog-card {
+    display: none;
+}
+
+/* Mostrar artículos según categoría seleccionada */
+#filter-nutricion:checked ~ main [data-tags~="nutricion"],
+#filter-ejercicios:checked ~ main [data-tags~="ejercicios"],
+#filter-consejos:checked ~ main [data-tags~="consejos"],
+#filter-eventos:checked ~ main [data-tags~="eventos"],
+#filter-all:checked ~ main .blog-card {
+    display: block;
+}
+
+/* Estilo para botones activos */
+.filter-radio:checked + .tag-btn {
+    background: white;
+    color: #333;
+}
+
+/* Filtrado con :target */
+.blog-card {
+    display: none;
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Mostrar todos por defecto */
+.blog-grid .blog-card {
+    display: block;
+}
+
+/* Ocultar todos excepto los seleccionados cuando hay un target */
+.blog-grid:target .blog-card {
+    display: none;
+}
+
+/* Mostrar según categoría */
+#nutricion:target .blog-grid [data-tags~="nutricion"],
+#ejercicios:target .blog-grid [data-tags~="ejercicios"],
+#consejos:target .blog-grid [data-tags~="consejos"],
+#eventos:target .blog-grid [data-tags~="eventos"],
+#all:target .blog-grid .blog-card {
+    display: block;
+}
+
+/* Estilo para botones activos */
+.tag-filter a:active,
+.tag-filter a:focus,
+.tag-filter a.active {
+    background: white;
+    color: #333;
+}
+
+body.dark .blog-header h1 {
+    color: #f8f9fa;
+}
+
+body.dark .tag-filter .tag-btn {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+body.dark .tag-filter .tag-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+
+body.dark .blog-card {
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+body.dark .blog-content {
+    color: var(--text-color);
+}
+
+body.dark .blog-card h2 {
+    color: #f8f9fa;
+}
+
+body.dark .blog-tag {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Dark mode for comments section */
+body.dark .comments-section {
+    background-color: var(--section-bg);
+}
+
+body.dark .comments-title {
+    color: #f8f9fa;
+}
+
+body.dark .comment {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+body.dark .comment-author,
+body.dark .comment-text {
+    color: var(--text-color);
+}
+
+body.dark .comment-form {
+    background-color: var(--card-bg);
+}
+
+body.dark .comment-form textarea {
+    background-color: #2d2d2d;
+    color: #f0f0f0;
+    border-color: #444;
+}
+
+body.dark .comment-reply-btn {
+    color: var(--primary-color);
+}
